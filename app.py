@@ -11,7 +11,7 @@ logging.basicConfig(
 )
 
 # Initialize Groq client (placeholder)
-client = Groq(os.getenv('groq'))
+client = Groq(api_key=os.getenv('groq'))
 
 # Set page configuration
 st.set_page_config(page_title="Code Generator with llama-3.1-70b-versatile", layout="wide")
