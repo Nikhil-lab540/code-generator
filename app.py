@@ -62,7 +62,7 @@ def generate_code_with_groq(prompt):
 if st.button("Generate Code"):
     if user_prompt:
         # Log the user prompt
-        logger.info(f"User input: {prompt}")
+        logger.info(f"User input: {user_prompt}")
         
         with st.spinner("Generating code..."):
             try:
