@@ -10,8 +10,6 @@ logger = logging.getLogger(__name__)
 # Initialize Groq client (placeholder)
 client = Groq(api_key=os.getenv('groq'))
 
-# Set page configuration
-st.set_page_config(page_title="Code Generator", layout="wide")
 
 # Title of the app
 st.title("Code Generator with llama-3.1-70b-versatile")
