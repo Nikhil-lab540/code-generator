@@ -10,7 +10,7 @@ logger = logging.getLogger(__name__)
 # Initialize Groq client (placeholder)
 client = Groq(api_key=os.getenv('groq'))
 
-
+st.set_page_config(page_title="Streamlit Code Generator with Logging", layout="wide")
 # Title of the app
 st.title("Code Generator with llama-3.1-70b-versatile")
 
