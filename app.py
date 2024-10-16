@@ -1,6 +1,7 @@
 import streamlit as st
 import logging
 from groq import Groq
+import os
 
 # Set up logging configuration to log prompts
 logging.basicConfig(
@@ -10,10 +11,10 @@ logging.basicConfig(
 )
 
 # Initialize Groq client (placeholder)
-client = Groq()
+client = Groq(os.getenv('groq'))
 
 # Set page configuration
-st.set_page_config(page_title="Streamlit Code Generator with Logging", layout="wide")
+st.set_page_config(page_title="Code Generator with llama-3.1-70b-versatile", layout="wide")
 
 # Title of the app
 st.title("Streamlit Code Generator with Prompt Logging")
