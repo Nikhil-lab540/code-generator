@@ -4,11 +4,8 @@ from groq import Groq
 import os
 
 # Set up logging configuration to log prompts
-logging.basicConfig(
-    filename="prompts.log",  # Log file to store user prompts
-    level=logging.INFO,  # Log info level to capture user inputs
-    format="%(asctime)s - %(message)s",  # Log format to capture the time and prompt
-)
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 # Initialize Groq client (placeholder)
 client = Groq(api_key=os.getenv('groq'))
@@ -65,7 +62,7 @@ def generate_code_with_groq(prompt):
 if st.button("Generate Code"):
     if user_prompt:
         # Log the user prompt
-        logging.info(f"User Prompt: {user_prompt}")
+        logger.info(f"User input: {prompt}")
         
         with st.spinner("Generating code..."):
             try:
